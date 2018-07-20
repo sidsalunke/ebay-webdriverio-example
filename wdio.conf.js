@@ -9,11 +9,45 @@ exports.config = {
         // 'path/to/excluded/files'
     ],
     baseUrl: 'https://www.ebay.com.au',
-    // maxInstances: 6,
+    seleniumLogs: './selenium-logs',
+    seleniumArgs: {
+        baseURL: 'https://selenium-release.storage.googleapis.com',
+        version: '3.13.0',
+        drivers: {
+        chrome: {
+            version: '2.40',
+            arch: process.arch,
+            baseURL: 'https://chromedriver.storage.googleapis.com',
+        },
+        firefox: {
+            version: '0.21.0',
+            arch: process.arch,
+            baseURL: 'https://github.com/mozilla/geckodriver/releases/download',
+        },
+        },
+    },
+    seleniumInstallArgs: {
+        baseURL: 'https://selenium-release.storage.googleapis.com',
+        version: '3.13.0',
+        drivers: {
+        chrome: {
+            version: '2.40',
+            arch: process.arch,
+            baseURL: 'https://chromedriver.storage.googleapis.com',
+        },
+        firefox: {
+            version: '0.21.0',
+            arch: process.arch,
+            baseURL: 'https://github.com/mozilla/geckodriver/releases/download',
+        },
+        },
+    },
     capabilities: [{
-        maxInstances: 10,
         browserName: 'firefox'
+    }, {
+        browserName: 'chrome'
     }],
+    maxInstances: 2,
     sync: true,
     logLevel: 'error',
     coloredLogs: true,
