@@ -10,7 +10,7 @@
   },
   "author": "Siddharth Salunke <salunke_siddharth@yahoo.com>",
   "dependencies": {
-    "wdio-cucumber-framework": "1.0.2",
+    "wdio-cucumber-framework": "1.1.1",
     "wdio-selenium-standalone-service": "0.0.10",
     "webdriverio": "4.13.1"
   },

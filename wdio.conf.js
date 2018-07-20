@@ -8,10 +8,11 @@ exports.config = {
     exclude: [
         // 'path/to/excluded/files'
     ],
+    baseUrl: 'https://www.ebay.com.au',
     // maxInstances: 6,
     capabilities: [{
         maxInstances: 10,
-        browserName: 'chrome'
+        browserName: 'firefox'
     }],
     sync: true,
     logLevel: 'error',
