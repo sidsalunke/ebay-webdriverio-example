@@ -1,10 +1,7 @@
 Feature: Verifying if added products added in the shopping cart still exist
 
-    Scenario: Open Ebay Australia home page
-        Given   I open Ebay Australia website
-        Then    The title of the page should be "Electronics, Cars, Fashion, Collectibles, Coupons and More | eBay"
-
     Scenario: Search for Product 1
+        Given   I open Ebay Australia website
         When    I search for a product called "myob accountright"
         And     I click on the search button
         Then    I should see the product listing page

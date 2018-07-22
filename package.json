@@ -6,13 +6,14 @@
   "license": "ISC",
   "scripts": {
     "test:local": "wdio wdio.conf.js --suite test",
-    "test:ci": "wdio wdio.conf.ci.js --suite test"
+    "test:ci": "wdio ci.conf.js --suite test"
   },
   "author": "Siddharth Salunke <salunke_siddharth@yahoo.com>",
   "dependencies": {
     "wdio-cucumber-framework": "1.1.1",
     "wdio-selenium-standalone-service": "0.0.10",
-    "webdriverio": "4.13.1"
+    "webdriverio": "4.13.1",
+    "wdio-browserstack-service": "0.1.13"
   },
   "devDependencies": {
     "chai": "4.1.0",
