@@ -27,7 +27,9 @@ npm run test:local
 3. To run the project using browserstack
 
 ```
-1. Navigate to project rename .env.template to .env and add your own access details 
+1a. Navigate to project rename .env.template to .env and add your own access details 
+            OR
+1b. Add your browserstack credentials directly in the ci.conf.js file
 2. npm run test:ci
 ```
 
@@ -50,3 +52,10 @@ On every execution of the test suite, a report will be generated on completion s
 2. Dot
 ```
 If a test has resulted in a failure a reasonable amount of information will be provided in the report to assist with debugging the issue, this could be either a meaningful error message detailing the reason of the fail and/or a screenshot.
+
+# Possible issues
+
+```
+1. Test run slower on chrome than firefox (need to investigate why this happens)
+2. intermittently, chrome will return a java socket error. Apparently this is a selenium issue and a workaround would be to degrade the selenium version to 3.4.0 as suggested here -> https://github.com/webdriverio/webdriverio/issues/2262
+```

@@ -12,7 +12,8 @@ exports.config = {
     seleniumLogs: './selenium-logs',
     seleniumArgs: {
         baseURL: 'https://selenium-release.storage.googleapis.com',
-        version: '3.13.0',
+        version: '3.13.0', // downgrade to 3.4.0 if there's a java.net.SocketException. 
+                          // More info -> https://github.com/webdriverio/webdriverio/issues/2262
         drivers: {
         chrome: {
             version: '2.40',
@@ -28,7 +29,8 @@ exports.config = {
     },
     seleniumInstallArgs: {
         baseURL: 'https://selenium-release.storage.googleapis.com',
-        version: '3.13.0',
+        version: '3.13.0', // downgrade to 3.4.0 if there's a java.net.SocketException. 
+        // More info -> https://github.com/webdriverio/webdriverio/issues/2262
         drivers: {
         chrome: {
             version: '2.40',
