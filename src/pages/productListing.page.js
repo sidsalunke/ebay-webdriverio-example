@@ -1,11 +1,13 @@
 const productListingPage = {
 
     pageDisplayed: () => {
-        browser.waitForVisible('.srp-main-content--flex'); // wait for page to load
+        const productListingPageElement = browser.element('.srp-main-content--flex');
+        return productListingPageElement;
     },
 
     selectFirstProduct: () => {
-        browser.click('#srp-river-results-listing1 > div > div.s-item__info.clearfix > a > h3'); // selector to locate first product
+        const firstProductElement = browser.element('#srp-river-results-listing1 > div > div.s-item__info.clearfix > a > h3');
+        return firstProductElement;
     },
 };
 

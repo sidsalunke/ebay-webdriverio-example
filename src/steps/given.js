@@ -1,7 +1,7 @@
 const { Given } = require('cucumber');
 
-const homepage = require('../pages/home.page');
+const actionsAdapter = require('../support/actionsAdapter');
 
 Given(
-    'I open Ebay Australia website', homepage.openWebsite
+    'I open Ebay Australia website', actionsAdapter.openWebsite
 );

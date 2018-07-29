@@ -1,19 +1,18 @@
 const { Then } = require('cucumber');
 
-const productListingPage = require ('../pages/productListing.page');
-const productPage = require('../pages/product.page');
 const assertionsAdapter = require('../support/assertionsAdapter');
+const actionsAdapter = require('../support/actionsAdapter');
 
 Then(
     'The title of the page should be "{string}"', assertionsAdapter.verifyPageTitle
 );
 
 Then(
-    'I should see the product listing page', productListingPage.pageDisplayed
+    'I should see the product listing page', actionsAdapter.waitForProductListingPage
 );
 
 Then(
-    'I should see Item added to cart modal', productPage.addToCartModalDisplayed
+    'I should see Item added to cart modal', actionsAdapter.waitForAddToCartModal
 );
 
 Then(

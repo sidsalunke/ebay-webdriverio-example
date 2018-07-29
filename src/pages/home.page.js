@@ -1,18 +1,14 @@
 const homepage = {
 
-    openWebsite: () => {
-        const url = browser.options.baseUrl; // baseUrl = https://www.ebay.com.au
-        browser.url(url);
-    },
-
-    searchForProduct: (productToSearch) => {
+    getSearchBoxElement: (productToSearch) => {
         const searchBoxLocator = '.ui-autocomplete-input'; // selector to locate search input box
-        browser.waitForEnabled(searchBoxLocator);
-        browser.setValue(searchBoxLocator, productToSearch);
+        const searchBoxElement = browser.element(searchBoxLocator);
+        return searchBoxElement;
     },
 
-    clickSearchButton: () => {
-        browser.click('#gh-btn'); // selector to locate search button
+    getSearchButton: () => {
+        const searchButton = browser.element('#gh-btn');
+        return searchButton;
     },
 
 };

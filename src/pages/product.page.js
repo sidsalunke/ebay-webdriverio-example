@@ -1,15 +1,19 @@
 const productPage = {
 
-    clickAddToCartButton: () => {
-        browser.click('#atcRedesignId_btn'); // selector to locate add to cart button
+    getAddToCartButtonElement: () => {
+        const addToCartButtonElement = browser.element('#atcRedesignId_btn');
+        return addToCartButtonElement
+        // browser.click('#atcRedesignId_btn'); // selector to locate add to cart button
     },
 
-    dismissModal: () => {
-        browser.click('.viicon-close'); // selector to locate close button on the popped up modal
+    getCloseModalElement: () => {
+        const closeModalElement = browser.element('.viicon-close');
+        return closeModalElement;
     },
 
     addToCartModalDisplayed: () => {
-        browser.waitForVisible('#atcRedesignId_overlay-atc-container'); // selector to locate add to cart modal
+        const addToCartModalElement = browser.element('#atcRedesignId_overlay-atc-container');
+        return addToCartModalElement;
     },
 
     getModalHeader: () => {
@@ -20,7 +24,8 @@ const productPage = {
     },
 
     clickGoToCartButton: () => {
-        browser.click('.app-atc-layer__actionRow a.btn.btn-scnd'); // selector to locate go to cart button
+        const goToCartButtonElement = browser.element('.app-atc-layer__actionRow a.btn.btn-scnd');
+        return goToCartButtonElement;
     },
 };
 

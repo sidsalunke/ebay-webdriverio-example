@@ -1,29 +1,27 @@
 const { When } = require('cucumber');
 
-const homepage = require('../pages/home.page');
-const productListingPage = require('../pages/productListing.page')
-const productPage = require('../pages/product.page');
+const actionsAdapter = require('../support/actionsAdapter');
 
 When(
-    'I search for a product called "{string}"', homepage.searchForProduct
+    'I search for a product called "{string}"', actionsAdapter.searchForProduct
 );
 
 When(
-    'I click on the search button', homepage.clickSearchButton
+    'I click on the search button', actionsAdapter.clickSearchButton
 );
 
 When(
-    'I select the first product from the list', productListingPage.selectFirstProduct
+    'I select the first product from the list', actionsAdapter.selectFirstProduct
 );
 
 When(
-    'I click on Add to cart button', productPage.clickAddToCartButton
+    'I click on Add to cart button', actionsAdapter.clickAddToCartButton
 );
 
 When(
-    'I dismiss the add to cart modal', productPage.dismissModal
+    'I dismiss the add to cart modal', actionsAdapter.clickCloseModal
 );
 
 When(
-    'I click on Go to cart', productPage.clickGoToCartButton
+    'I click on Go to cart', actionsAdapter.clickGoToCartButton
 );
