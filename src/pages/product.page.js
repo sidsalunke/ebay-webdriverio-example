@@ -1,5 +1,3 @@
-const assert = require('chai').assert;
-
 const productPage = {
 
     clickAddToCartButton: () => {
@@ -14,11 +12,11 @@ const productPage = {
         browser.waitForVisible('#atcRedesignId_overlay-atc-container'); // selector to locate add to cart modal
     },
 
-    verifyModalHeader: (expectedModalHeader) => {
-        const headerLocator = '.vi-overlayTitleBar'; 
+    getModalHeader: () => {
+        const headerLocator = 'a.vi-VR-btnWdth-XL:nth-child(1) > span:nth-child(1) > span:nth-child(1)'; // selector to locate checkout button in modal
         browser.waitForExist(headerLocator);
         const actualModalHeader = browser.getText(headerLocator);
-        assert(actualModalHeader, expectedModalHeader, `Expected ${expectedModalHeader} but found ${actualModalHeader}`);
+        return actualModalHeader;
     },
 
     clickGoToCartButton: () => {

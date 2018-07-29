@@ -24,7 +24,7 @@ Feature: Verifying if added products added in the shopping cart still exist
         When    I select the first product from the list
         And     I click on Add to cart button
         Then    I should see Item added to cart modal
-        And     I should see "Checkout 2 item"
+        And     I should see "Checkout 2 items"
 
     Scenario: Go to shopping cart and verify if the products were added correctly
         When    I click on Go to cart

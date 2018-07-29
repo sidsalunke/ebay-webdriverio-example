@@ -2,11 +2,10 @@ const { Then } = require('cucumber');
 
 const productListingPage = require ('../pages/productListing.page');
 const productPage = require('../pages/product.page');
-const cartPage = require('../pages/cart.page')
-const verifyTitle = require ('../support/verifyTitle');
+const assertionsAdapter = require('../support/assertionsAdapter');
 
 Then(
-    'The title of the page should be "{string}"', verifyTitle
+    'The title of the page should be "{string}"', assertionsAdapter.verifyPageTitle
 );
 
 Then(
@@ -18,13 +17,13 @@ Then(
 );
 
 Then(
-    'I should see "{string}"', productPage.verifyModalHeader
+    'I should see "{string}"', assertionsAdapter.verifyProductModalHeader
 );
 
 Then(
-    'The cart summary should show "{string}"', cartPage.verifyCartSummary
+    'The cart summary should show "{string}"', assertionsAdapter.verifyCartSummary
 );
 
 Then(
-    'The name of the "{string}" product added in the cart is "{string}"', cartPage.verifyCartProductNames
+    'The name of the "{string}" product added in the cart is "{string}"', assertionsAdapter.verifyCartProductNames
 );
