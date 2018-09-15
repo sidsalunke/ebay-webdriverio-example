@@ -1,6 +1,6 @@
-const homePage = require('../pages/home.page');
-const productPage = require('../pages/product.page');
-const productListingPage = require('../pages/productListing.page');
+import homePage from '../pages/home.page';
+import productPage from '../pages/product.page';
+import productListingPage from '../pages/productListing.page';
 
 const actionsAdapter = {
 

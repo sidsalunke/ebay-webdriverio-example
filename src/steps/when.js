@@ -1,6 +1,6 @@
-const { When } = require('cucumber');
+import { When } from 'cucumber';
 
-const actionsAdapter = require('../support/actionsAdapter');
+import actionsAdapter from '../support/actionsAdapter';
 
 When(
     'I search for a product called "{string}"', actionsAdapter.searchForProduct

@@ -1,4 +1,4 @@
-const { Given } = require('cucumber');
+import { Given } from 'cucumber';
 
 const actionsAdapter = require('../support/actionsAdapter');
 

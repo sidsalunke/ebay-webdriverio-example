@@ -1,4 +1,4 @@
-const { Then } = require('cucumber');
+import { Then } from 'cucumber';
 
 const assertionsAdapter = require('../support/assertionsAdapter');
 const actionsAdapter = require('../support/actionsAdapter');

@@ -62,7 +62,7 @@ exports.config = {
     reporters: ['spec', 'dot'],
     cucumberOpts: {
         backtrace: false,
-        compiler: [],
+        compiler: ['js:babel-register'],
         failAmbiguousDefinitions: true,
         failFast: true,
         ignoreUndefinedDefinitions: false,

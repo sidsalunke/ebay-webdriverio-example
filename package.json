@@ -9,15 +9,17 @@
     "test:ci": "wdio ci.conf.js --suite test"
   },
   "author": "Siddharth Salunke <salunke_siddharth@yahoo.com>",
-  "dependencies": {
+  "devDependencies": {
+    "chai": "4.1.0",
+    "wdio-spec-reporter": "0.1.2",
+    "wdio-dot-reporter": "0.0.8",
+    "babel-core": "^6.11.4",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-register": "^6.11.5",
     "wdio-cucumber-framework": "1.1.1",
     "wdio-selenium-standalone-service": "0.0.10",
     "webdriverio": "4.13.1",
     "wdio-browserstack-service": "0.1.13"
-  },
-  "devDependencies": {
-    "chai": "4.1.0",
-    "wdio-spec-reporter": "0.1.2",
-    "wdio-dot-reporter": "0.0.8"
   }
 }

@@ -1,7 +1,7 @@
-const assert = require('chai').assert;
-const commonChecks = require('./commonChecks');
-const cartPage = require('../pages/cart.page');
-const productPage = require('../pages/product.page');
+import assert from 'chai';
+import commonChecks from './commonChecks';
+import cartPage from '../pages/cart.page';
+import productPage from '../pages/product.page';
 
 const assertionsAdapter = {
     
