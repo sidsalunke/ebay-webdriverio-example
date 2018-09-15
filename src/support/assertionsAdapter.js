@@ -21,7 +21,7 @@ const assertionsAdapter = {
     },
 
     verifyCartProductNames: (productNumber, expectedCartProductNames) => {
-        const actualCartProductNames = cartPage.getCartProductNames();
+        const actualCartProductNames = cartPage.getCartProductNames().getText().toString();
         assert.include(actualCartProductNames, expectedCartProductNames, `Expected ${productNumber} product name to be ${expectedCartProductNames} but found ${actualCartProductNames}`);
     }
 

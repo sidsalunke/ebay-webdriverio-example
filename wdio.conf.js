@@ -45,9 +45,11 @@ exports.config = {
         },
     },
     capabilities: [{
-        browserName: 'firefox'
+        browserName: 'firefox',
+        version:'latest'
     }, {
-        browserName: 'chrome'
+        browserName: 'chrome',
+        version:'latest'
     }],
     maxInstances: 2,
     sync: true,

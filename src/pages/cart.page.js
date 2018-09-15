@@ -1,12 +1,12 @@
 const cartPage = {
 
     getCartProductNames: () => {
-        const actualProductNames = browser.getText('.ff-ds3.fs16.mb5.fw-n.sci-itmttl'); // selector to get all product names in the cart
+        const actualProductNames = browser.elements('.cart-bucket-lineitem'); // selector to get all product names in the cart
         return actualProductNames;
     },
 
     getCartSummary: () => {
-        const actualCartSummary = browser.getText('div:nth-child(1) > table > tbody > tr:nth-child(1) > td:nth-child(1)'); // force to use css selectors to locate elements
+        const actualCartSummary = browser.getText('.cartsummary > table:nth-child(3) > tr:nth-child(2) > td:nth-child(1)'); // force to use css selectors to locate elements
         return actualCartSummary;
     }
 };

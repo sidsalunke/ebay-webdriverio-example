@@ -29,7 +29,7 @@ Feature: Verifying if added products added in the shopping cart still exist
     Scenario: Go to shopping cart and verify if the products were added correctly
         When    I click on Go to cart
         Then    The title of the page should be "Shopping cart"
-        And     The cart summary should show "Subtotal (2 items):"
+        And     The cart summary should show "Items (2)"
 
     Scenario Outline: Verify product names that were added to the cart
         Then    The name of the <productNumber> product added in the cart is <productName>
