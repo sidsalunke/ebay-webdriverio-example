@@ -51,4 +51,4 @@ const actionsAdapter = {
 
 };
 
-module.exports = actionsAdapter;
+export default actionsAdapter;

@@ -6,4 +6,4 @@ const commonChecks = {
     },
 };
 
-module.exports = commonChecks;
+export default commonChecks;

@@ -29,4 +29,4 @@ const productPage = {
     },
 };
 
-module.exports = productPage;
+export default productPage;

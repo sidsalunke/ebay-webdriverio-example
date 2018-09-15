@@ -11,4 +11,4 @@ const cartPage = {
     }
 };
 
-module.exports = cartPage;
+export default cartPage;

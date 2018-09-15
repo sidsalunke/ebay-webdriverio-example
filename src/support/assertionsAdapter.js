@@ -1,10 +1,10 @@
-import assert from 'chai';
+import { assert } from 'chai';
 import commonChecks from './commonChecks';
 import cartPage from '../pages/cart.page';
 import productPage from '../pages/product.page';
 
 const assertionsAdapter = {
-    
+
     verifyPageTitle: (expectedPageTitle) => {
         const actualPageTitle = commonChecks.getPageTitle();
         assert.strictEqual(actualPageTitle, expectedPageTitle, `Expected title of the page to be "${expectedPageTitle}" but found "${actualPageTitle}"`)
@@ -27,4 +27,4 @@ const assertionsAdapter = {
 
 };
 
-module.exports = assertionsAdapter;
+export default assertionsAdapter;

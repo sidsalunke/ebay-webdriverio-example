@@ -1,7 +1,7 @@
 import { Then } from 'cucumber';
 
-const assertionsAdapter = require('../support/assertionsAdapter');
-const actionsAdapter = require('../support/actionsAdapter');
+import assertionsAdapter from '../support/assertionsAdapter';
+import actionsAdapter from '../support/actionsAdapter';
 
 Then(
     'The title of the page should be "{string}"', assertionsAdapter.verifyPageTitle

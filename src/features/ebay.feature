@@ -28,7 +28,7 @@ Feature: Verifying if added products added in the shopping cart still exist
 
     Scenario: Go to shopping cart and verify if the products were added correctly
         When    I click on Go to cart
-        Then    The title of the page should be "Your eBay Shopping Cart"
+        Then    The title of the page should be "Shopping cart"
         And     The cart summary should show "Subtotal (2 items):"
 
     Scenario Outline: Verify product names that were added to the cart

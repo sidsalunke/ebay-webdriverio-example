@@ -11,4 +11,4 @@ const productListingPage = {
     },
 };
 
-module.exports = productListingPage;
+export default productListingPage;
